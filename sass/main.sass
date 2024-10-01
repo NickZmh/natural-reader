@@ -1,0 +1,372 @@
+@import "bourbon/bourbon"
+
+html.js .loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+body
+	font-family: 'Roboto', sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialiased
+	overflow-x: hidden
+	margin: 0
+	color: #000
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+
+//general
+
+//fonts
+$bold-font: 700
+
+
+//colors
+$black-color: #000
+$blue-color: #5090F8
+
+a,
+span
+	text-decoration: none !important
+
+.button:hover
+	color: #fff
+
+.button:hover
+	background-color: rgba(81, 144, 248, 0.8)
+	-webkit-transition: all 0.5s ease-in-out
+	transition: all 0.5s ease-in-out
+
+ul
+	margin: 0
+	padding: 0
+li
+	list-style-type: none
+
+.button
+	padding: 14px 28px
+	border-radius: 4px
+	font-weight: 400
+	background-color: $blue-color
+	color: #fff
+
+header
+	padding-top: 40px
+	.logo-wrapper
+		display: flex
+		flex-direction: row
+		align-items: center
+		img
+			height: 45px
+			width: 45px
+		span
+			font-size: 24px
+			color: $black-color
+			font-weight: $bold-font
+			margin-left: 10px
+	.navigation
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+
+section.speech
+	padding-top: 180px
+	position: relative
+	.wrapper-stick-image
+		position: absolute
+		right: 0
+		max-width: 570px
+		img.right-photo
+			max-width: 100%
+	h1
+		font-size: 46px
+		font-weight: 700
+		margin-bottom: 50px
+	p
+		font-size: 20px
+		font-weight: 400
+		margin-bottom: 50px
+	.button-wrapper
+		display: flex
+		.button
+			padding: 23px 38px
+			font-size: 16px
+			&.blue
+				color: #fff
+				margin-right: 25px
+			&.transparent
+				color: #979797
+				padding: 22px 38px
+				background-color: transparent
+				border: 1px solid #979797
+	.photo-phantom
+		max-width: 100%
+
+section.oval-group
+	padding-top: 155px
+	.ovals-body
+		display: flex
+		flex-direction: row
+		justify-content: space-around
+		.oval-item
+			display: flex
+			flex-direction: column
+			align-items: center
+			.oval
+				position: relative
+				width: 160px
+				height: 160px
+				background-color: rgba(80, 144, 248, .2)
+				border-radius: 50%
+				margin-bottom: 35px
+				&:before
+					content: ''
+					position: absolute
+					background-repeat: no-repeat
+					background-position: center center
+					width: 100%
+					height: 100%
+				&.icon-voice:before
+					background-image: url(../img/voice-icon.png)
+				&.headphone-icon:before
+					background-image: url(../img/headphone-icon.png)
+
+
+			h1
+				font-size: 24px
+				font-weight: 700
+				margin-bottom: 20px
+			p
+				font-size: 16px
+				font-weight: 400
+
+
+section.listen-recommendations
+	padding-top: 150px
+	position: relative
+	//.img-left
+	//	position: absolute
+	//	left: 0
+	//	width: auto
+	//	max-width: 100%
+	//height: 100%
+	.wrapper-stick-image
+		position: absolute
+		left: 0
+		max-width: 410px
+		.img-left
+			max-width: 100%
+	.right-section
+		padding-top: 125px
+		p
+			font-size: 24px
+			font-weight: 400
+			margin-bottom: 23px
+		h1
+			font-size: 40px
+			font-weight: 700
+			margin-bottom: 50px
+		.button-wrapper
+			display: flex
+			margin-bottom: 50px
+			.button
+				font-size: 16px
+				padding: 23px 40px
+		.tiles-body
+			display: flex
+			flex-direction: column
+			margin-top: 60px
+			.tiles-row
+				display: flex
+				flex-direction: row
+				justify-content: flex-start
+				margin-bottom: 40px
+				&:last-child
+					margin-bottom: 0
+				.tiles
+					display: flex
+					flex-direction: column-reverse
+					width: 280px
+					height: 160px
+					box-shadow: 0 4px 20px rgba(0,0,0, .2)
+					padding: 30px
+					&:first-child
+						margin-right: 40px
+					span
+						position: relative
+						font-size: 16px
+						font-weight: 400
+						line-height: 18px
+						&:before
+							content: ''
+							position: absolute
+							width: 24px
+							height: 24px
+							border-radius: 50%
+							bottom: 35px
+							background-color: $blue-color
+
+section.create-audio
+	position: relative
+	padding-top: 190px
+	margin-bottom: 350px
+	.wrapper-stick-image
+		position: absolute
+		right: 0
+		max-width: 680px
+		img.img-right
+			max-width: 100%
+		//position: absolute
+		//top: 150px
+		//right: 0
+		//width: auto
+		//height: 770px
+	.left-section
+		p
+			font-size: 24px
+			font-weight: 400
+			margin-bottom: 23px
+		h1
+			font-size: 40px
+			font-weight: 700
+			margin-bottom: 40px
+		.list-for-create-audio
+			li
+				margin-bottom: 15px
+				&:last-child
+					margin-bottom: 50px
+		.button-wrapper
+			display: flex
+			.button
+				padding: 23px 51px
+				
+section.section-for-carousel
+	background-color: $blue-color
+	padding: 80px 0 70px 0
+	h1
+		font-size: 40px
+		font-weight: 400
+		color: #ffffff
+		text-align: center
+		margin-bottom: 40px
+	.owl-carousel
+		.owl-stage-outer
+			.owl-stage
+				.owl-item
+					&.active
+						position: relative
+						&:before
+							content: ''
+							position: absolute
+							left: -12px
+							width: 1px
+							height: 160px
+							background-color: rgba(255, 255, 255, .5)
+					.element
+						display: flex
+						flex-direction: column
+						align-items: flex-end
+						p,
+						span
+							font-size: 16px
+							font-weight: 400
+							color: #fff
+						p
+							padding: 0 38px
+							margin-bottom: 15px
+						span
+							padding-right: 25px
+							font-weight: 600
+		.owl-nav
+			button
+				&.owl-prev,
+				&.owl-next
+					position: absolute
+					top: 20px
+				&.owl-prev:before,
+				&.owl-next:before
+					content: ''
+					position: absolute
+					background-image: url(../img/arrow.png)
+					background-repeat: no-repeat
+					background-position: center center
+					width: 15px
+					height: 24px
+				&.owl-next
+					right: -50px
+					top: 44px
+					transform: rotate(180deg)
+				&.owl-prev
+					left: -65px
+
+footer
+	font-size: 16px
+	font-weight: 400
+	.wrapper-for-list
+		padding-top: 80px
+		padding-bottom: 90px
+		.img-wrapper
+			img
+				width: 110px
+				height: 110px
+				max-width: 100%
+		.bottom-menu
+			display: flex
+			flex-direction: row
+			ul
+				font-weight: 700
+				li
+					padding: 8px 0
+					a
+						font-weight: 400
+						color: #000
+					&:first-child
+						padding-top: 25px
+	.copyright
+		padding: 30px 0
+		background-color: #E3E3E3
+		.wrapper-copyright
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+		span
+			a
+				color: #5090F8
+				text-decoration: underline !important
+
+
+.hidden
+	display: none
+
+.hello
+	display: none
